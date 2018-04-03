@@ -1,0 +1,49 @@
+$x-small: 320px;
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$x-large: 1200px; 
+$xx-large: 1366px;
+$xxx-large: 1520px;
+//other
+$iPhonePlus: 414px;
+$small-medium: 560px;
+$medium-large: 992px;
+//custom 
+$size-nine: 900px;
+
+@mixin screen-size($media) {
+    @if $media == x-small {
+        @media only screen and (min-width:$x-small), print { @content; }
+    }
+    @if $media == small {
+        @media only screen and (min-width:$small), print { @content; }
+    }
+    @else if $media == 'small-medium' {
+        @media only screen and (min-width:$small-medium), print { @content; }
+    }
+    @else if $media == medium {
+        @media only screen and (min-width:$medium), print { @content; }
+    }
+    @else if $media == 'medium-large' {
+        @media only screen and (min-width:$medium-large), print { @content; }
+    }
+    @else if $media == large {
+        @media only screen and (min-width:$large), print { @content; }
+    }
+    @else if $media == x-large {
+        @media only screen and (min-width:$x-large), print { @content; }
+    }
+    @else if $media == xx-large {
+        @media only screen and (min-width:$xx-large), print { @content; }
+    }
+    @else if $media == xxx-large {
+        @media only screen and (min-width:$xxx-large), print { @content; }
+    }
+    @else if $media == iphone-plus {
+        @media only screen and (min-width:$iPhonePlus), print { @content; }
+    }
+    @else if $media == size-nine {
+        @media only screen and (min-width:$size-nine), print { @content; }
+    }
+}

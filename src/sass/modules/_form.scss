@@ -1,0 +1,76 @@
+.form {
+
+    .form__input {
+        font-size: 1.9em;
+
+        @include screen-size(medium) {
+            font-size: 1.6em;
+        }
+
+        margin-bottom: 1.5em;
+
+        label {
+            display: block;
+            margin-bottom: .5em;
+        }
+
+    }
+
+    input[type=text] {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+
+        @include screen-size(medium) {
+            width: 70%;
+        }
+    }
+
+    input[type=number],
+    input[type=email] {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+
+        @include screen-size(medium) {
+            width: 60%;
+        }
+    }
+
+    input[type=text],
+    input[type=number],
+    input[type=email] {
+        border: 2px solid $colour-green;
+        padding: 1em;
+        border-radius: .3em;
+        font-size: 1em;
+    }
+
+    ::-webkit-input-placeholder {
+        color: $colour_placeholder; 
+    }
+    :-moz-placeholder {
+        color: $colour_placeholder; 
+       opacity:  1;
+    }
+    ::-moz-placeholder {
+        color: $colour_placeholder; 
+       opacity:  1;
+    }
+    :-ms-input-placeholder {
+        color: $colour_placeholder; 
+    }
+    ::-ms-input-placeholder {
+        color: $colour_placeholder; 
+    }
+    
+    ::placeholder {
+        color: $colour_placeholder; 
+    }
+
+    input[type=submit] {
+        
+    }
+}

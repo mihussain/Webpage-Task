@@ -1,0 +1,49 @@
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/colours';
+@import 'partials/typography';
+@import 'partials/buttons';
+@import 'modules/header';
+@import 'modules/form';
+@import 'modules/sections';
+@import 'modules/footer';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    color: $colour_text;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+
+    @include screen-size(medium) {
+        padding: 0 2em;
+    }
+
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+.desktop {
+    display: none;
+
+    @include screen-size(medium) {
+        display: block;    
+    }
+}
+
+.mobile {
+
+
+    @include screen-size(medium) {
+        display: none;    
+    }
+}

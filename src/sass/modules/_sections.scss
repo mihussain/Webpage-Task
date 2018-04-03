@@ -1,0 +1,262 @@
+.section {
+    display: block;
+    padding: 4em 0;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .section_split {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        @include screen-size(medium) {       
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            align-items: center;
+        }
+        
+        .section__left {
+            width: 100%;
+            text-align: center;
+
+            @include screen-size(medium) {
+                width: 50%;
+                padding: 0 1.5em;
+                text-align: left;
+            }
+        }
+
+        .section__right {
+            width: 100%;
+            text-align: center;
+
+            @include screen-size(medium) {
+                width: 50%;
+                padding: 0 1.5em;
+                text-align: left;
+            }
+        }
+
+        .section_30 {
+            width: 100%;    
+            text-align: center;
+
+            @include screen-size(medium) { 
+                align-self: center;
+                padding: 0 1.5em;
+                width: 30%;
+                text-align: left;
+            }
+        }
+
+        .section_70 {
+            width: 100%;
+            text-align: center;
+
+            @include screen-size(medium) { 
+                align-self: center;
+                padding: 0 1.5em;
+                width: 70%;
+                text-align: left;
+            }
+        }
+    }
+
+    &.section_one,{
+        padding: 2em 0;
+        background: $colour_grey;
+
+        img {
+            margin: 0 auto;
+            display: none;
+
+            @include screen-size(medium) { 
+                display: block;
+            }
+        }
+    }
+
+    &.section_two {
+        text-align: center;
+
+        .three_steps {
+            display: block;
+            clear: both;
+        
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .step {
+                margin: 3em 0;
+                width: 100%;
+
+                @include screen-size(medium) { 
+                    width: 33%;
+                    float: left;
+                }
+
+                > div {
+                    margin: 0 3em;
+                }
+
+                h4 {
+                    color: $colour-green
+                }
+
+                .image {
+                    display: block;
+                    margin: 0 auto 2em;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        max-width: 240px;
+                        
+                        @include screen-size(medium) {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .small-text {
+            margin: 4em auto 0;
+            max-width: 768px;
+            
+            p {
+                color: #757476;
+            }
+            
+            span {
+                font-family: 'cabin-bold', Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &.section_three {
+        background: $colour_grey;
+
+        h3 {
+            font-size: 3.5em;
+
+            @include screen-size(medium) {
+                font-size: 2.5em;   
+            }
+        }
+
+        @include screen-size(medium) {
+            background: none;    
+        }
+
+        .section__left,
+        .section__right {
+            text-align: left;
+        }
+
+        .section__left {
+            align-self: flex-start;
+        }
+
+        .secure {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            align-items: center;
+            margin-bottom: 1.5em;
+
+            .secure__text {
+                font-size: 1.9em;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    &.section_four {
+            padding: 4em 0;
+
+            @include screen-size(medium) {
+                background: $colour_grey;
+            }
+
+            img {
+                position: relative;
+                margin-bottom: 3em;
+                max-width: 30.7em;
+                width: 100%;
+                height: auto;
+
+                @include screen-size(medium) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-bottom: 0;
+                }
+            }
+        
+    }
+
+    &.section_five {
+        padding: 2em 0;
+        background: $colour_grey;
+
+        @include screen-size(medium) {
+            border-bottom: .3em solid $colour-grey;
+            padding: 8em 0 4em;
+            background: $white;
+        }
+
+        .section_split {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        
+            .section_30 {
+                width: 14em;
+                align-self: flex-end;
+            }
+
+            .section_70 {
+                align-self: flex-end;
+                padding-bottom: 1em;
+            }
+        }
+
+
+        .money_advice {
+            align-items: flex-end;
+            
+            img {
+                width: 120px;
+                height: auto;
+                display: inline-block;
+                float: right;
+
+                @include screen-size(medium) {
+                    margin-right: 4em;
+                }
+            }
+
+            p {
+                display: inline-block;
+                font-size: 1.2em;
+
+                span {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
